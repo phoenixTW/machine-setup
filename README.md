@@ -53,7 +53,7 @@ make
 
 - [@phoenixTW](https://github.com/phoenixTW) - Initial work
 
-See also the list of [contributors](https://github.com/machine-setup/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/phoenixTW/machine-setup/graphs/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
