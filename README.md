@@ -57,4 +57,4 @@ See also the list of [contributors](https://github.com/machine-setup/The-Documen
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Inspired by [mac-setup](https://github.com/kdabir/mac-setup) by [Kunal Dabir](https://github.com/kdabir)
+- Inspired from [mac-setup](https://github.com/kdabir/mac-setup) by [Kunal Dabir](https://github.com/kdabir)
