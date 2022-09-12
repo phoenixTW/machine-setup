@@ -8,7 +8,7 @@ devtools:
 	@sh dev-tools.sh
 
 misc:
-	@zsh misc.sh
+	@sh misc.sh
 
 setup: base devtools apps misc
 

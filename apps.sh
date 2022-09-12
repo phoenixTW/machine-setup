@@ -44,5 +44,6 @@ install_app 1password-cli "1Password CLI"
 install_app iterm2 "iTerm2 v3+"
 install_app visual-studio-code "VS Code"
 install_app intellij-idea-ce "IntelliJ IDEA Community"
+install_app flycut "Flycut"
 
 install_all "${to_be_installed[@]}"
