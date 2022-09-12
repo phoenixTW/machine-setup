@@ -1,21 +1,31 @@
+## Text Style
+bold=$(tput bold)
+normal=$(tput sgr 0)
+
+## Color
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+blue_alert=$(tput setaf 99)
+magenta=$(tput setaf 5)
+
 ## User Interaction
 
 # inspiration: http://unix.stackexchange.com/questions/92563/friendly-terminal-color-names-in-shell-scripts
 
 success() {
-  echo $(tput setaf 2)"$*"$(tput sgr 0)
+  echo "${green}$*${normal}"
 }
 
 alert() {
-  echo $(tput setaf 99)"$*"$(tput sgr 0)
+  echo "${blue_alert}$*"$(tput sgr 0)
 }
 
 already_installed() {
-  echo $(tput setaf 2)"✔"$(tput sgr 0) "$* already installed"
+  echo "${green}✔${normal}$* already installed"
 }
 
 terminate() {
-  echo $(tput bold)$(tput setaf 1) "$@" $(tput sgr 0)
+  echo "${bold}${red} $@ ${normal}"
   exit 1
 }
 

@@ -7,6 +7,9 @@ apps:
 devtools:
 	@sh dev-tools.sh
 
-setup: base devtools apps
+misc:
+	@zsh misc.sh
+
+setup: base devtools apps misc
 
 .DEFAULT_GOAL := setup

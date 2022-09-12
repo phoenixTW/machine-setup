@@ -4,6 +4,7 @@ set +e
 source ./user-interactions.sh
 
 to_be_installed=$()
+to_be_installed_asdf_tools=$()
 
 function install_app() {
     local APP_ID=$1
@@ -18,6 +19,37 @@ function install_app() {
         else
             echo "✗ skipping $APP_NAME ($APP_ID)"
         fi
+    fi
+}
+
+function install_asdf_plugin() {
+    local PLUGIN_NAME=$1
+    local TOOL_VERSION=$2
+
+    ## Installing plugins
+    if asdf plugin list | grep "${PLUGIN_NAME}"; then
+        already_installed "${PLUGIN_NAME} plugin"
+
+    else
+        if confirm "Install asdf plugin ${PLUGIN_NAME}?"; then
+            asdf plugin add "${PLUGIN_NAME}"
+            echo "✔ plugin installed ${PLUGIN_NAME}"
+        else
+            echo "✗ skipping ${PLUGIN_NAME}"
+        fi
+    fi
+
+    ## Enqueuing app
+    if asdf list "${PLUGIN_NAME}" "${TOOL_VERSION}"; then
+        already_installed "${PLUGIN_NAME}" "${TOOL_VERSION}"
+    else
+        alert "Installing asdf tool ${PLUGIN_NAME} ${TOOL_VERSION}...\n"
+        asdf install "${PLUGIN_NAME}" "${TOOL_VERSION}"
+        success "---------------------- Installation Successful -----------------------------\n\n"
+
+        alert "Setting up global value for ${PLUGIN_NAME} to ${TOOL_VERSION}...\n"
+        asdf global "${PLUGIN_NAME}" "${TOOL_VERSION}"
+        success "---------------------- ${PLUGIN_NAME} set successfully -----------------------------\n\n"
     fi
 }
 
@@ -39,5 +71,11 @@ install_app tig "Tig: text-mode interface for Git"
 install_app docker "Docker"
 install_app gpg "GPG"
 install_app xclip "xclip"
+
+## DevOps and Tooling
+install_asdf_plugin terraform "1.1.5"
+install_asdf_plugin terragrunt "0.36.0"
+install_asdf_plugin nodejs "latest"
+install_asdf_plugin yarn "latest"
 
 install_all "${to_be_installed[@]}"

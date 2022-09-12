@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "thomascsd.vscode-readme-pattern",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "alexanderte.dainty-vscode",
+        "orta.vscode-jest",
+        "firsttris.vscode-jest-runner",
+        "andys8.jest-snippets",
+        "dbaeumer.vscode-eslint",
+        "wix.vscode-import-cost",
+        "styled-components.vscode-styled-components",
+        "burkeholland.simple-react-snippets",
+        "ms-azuretools.vscode-docker",
+        "tabnine.tabnine-vscode",
+        "4ops.terraform"
+    ]
+}
