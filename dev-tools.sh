@@ -75,6 +75,7 @@ install_app openssl "OpenSSL"
 ## DevOps and Tooling
 install_asdf_plugin terraform "1.1.5"
 install_asdf_plugin terragrunt "0.36.0"
+install_asdf_plugin awscli "latest"
 install_asdf_plugin aws-vault "latest"
 install_asdf_plugin nodejs "latest"
 install_asdf_plugin yarn "latest"
