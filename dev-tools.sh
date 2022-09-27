@@ -68,13 +68,14 @@ install_app tree "Tree"
 install_app autojump "AutoJump"
 install_app act "act: Github Action runs locally"
 install_app tig "Tig: text-mode interface for Git"
-install_app docker "Docker"
 install_app gpg "GPG"
 install_app xclip "xclip"
+install_app openssl "OpenSSL"
 
 ## DevOps and Tooling
 install_asdf_plugin terraform "1.1.5"
 install_asdf_plugin terragrunt "0.36.0"
+install_asdf_plugin aws-vault "latest"
 install_asdf_plugin nodejs "latest"
 install_asdf_plugin yarn "latest"
 
