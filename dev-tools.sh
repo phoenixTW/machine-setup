@@ -71,6 +71,9 @@ install_app tig "Tig: text-mode interface for Git"
 install_app gpg "GPG"
 install_app xclip "xclip"
 install_app openssl "OpenSSL"
+install_app k9s "Kubernetes CLI tool"
+install_app mongodb-compass "MongoDB Compass"
+
 
 ## DevOps and Tooling
 install_asdf_plugin terraform "1.1.5"
@@ -79,5 +82,11 @@ install_asdf_plugin awscli "latest"
 install_asdf_plugin aws-vault "latest"
 install_asdf_plugin nodejs "latest"
 install_asdf_plugin yarn "latest"
+install_asdf_plugin golang "latest"
+install_asdf_plugin gofumpt "latest"
+install_asdf_plugin golangci-lint "latest"
+install_asdf_plugin java "corretto-17.0.6.10.1"
+install_asdf_plugin swag "latest"
+install_asdf_plugin jq "jq"
 
 install_all "${to_be_installed[@]}"
